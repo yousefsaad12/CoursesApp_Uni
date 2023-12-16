@@ -1845,8 +1845,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ServicesInterfaces\IAdminServices.cs" />
     <Compile Include="ServicesInterfaces\ICategoryService.cs" />
+    <Compile Include="ServicesInterfaces\ICourseServices.cs" />
     <Compile Include="Services\AdminService.cs" />
     <Compile Include="Services\CategoryService.cs" />
+    <Compile Include="Services\CourseService.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\web.config" />

@@ -5,7 +5,7 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram DiagramId="882376634a0e4852927f274b56635f56" Name="Diagram1" ZoomLevel="85">
-        <EntityTypeShape EntityType="Courses_DBModel.Admin" Width="1.5" PointX="8.125" PointY="2.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="Courses_DBModel.Admin" Width="1.5" PointX="9.625" PointY="1.875" IsExpanded="true" />
         <EntityTypeShape EntityType="Courses_DBModel.Category" Width="1.5" PointX="6.125" PointY="7.375" IsExpanded="true" />
         <EntityTypeShape EntityType="Courses_DBModel.Course" Width="1.5" PointX="10.125" PointY="4.25" IsExpanded="true" />
         <EntityTypeShape EntityType="Courses_DBModel.Course_Lessons" Width="1.5" PointX="13.375" PointY="2.75" IsExpanded="true" />

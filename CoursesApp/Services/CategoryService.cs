@@ -28,9 +28,40 @@ namespace CoursesApp.Services
            return db.SaveChanges(); 
         }
 
+        public bool DeleteCategory(int category_Id)
+        {
+            Category category = GetCategoryById(category_Id);
+
+            if (category == null)
+                    return false;
+
+            db.Categories.Remove(category);
+            return true;
+        }
+
+        public bool UpdateCategory(Category UpdatedCategory)
+        {
+
+            Category category = GetCategoryById(UpdatedCategory.ID);
+
+          if (category == null) {return false; }
+
+          category.Name = UpdatedCategory.Name;
+
+          db.SaveChanges();
+
+          return true;
+           
+        }
+
         public List<Category> GetCategories()
         {
             return db.Categories.ToList();
+        }
+
+        public Category GetCategoryById(int category_Id)
+        {
+           return db.Categories.FirstOrDefault(cat => cat.ID == category_Id);
         }
     }
 }
