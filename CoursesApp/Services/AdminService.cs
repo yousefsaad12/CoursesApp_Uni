@@ -9,7 +9,7 @@ namespace CoursesApp.Services
 {
     public class AdminService : IAdminServices
     {
-        public Courses_DBEntities context { get; set; }
+        private readonly Courses_DBEntities context;
 
         public AdminService() 
         {
