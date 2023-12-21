@@ -12,7 +12,7 @@ namespace CoursesApp.ServicesInterfaces
         List<Category> GetCategories();
         int Create(Category category);
 
-        bool UpdateCategory(Category UpdatedCategory);
+        int UpdateCategory(Category UpdatedCategory);
 
         bool DeleteCategory(int category_Id);
 

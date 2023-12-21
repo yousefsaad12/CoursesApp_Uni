@@ -36,21 +36,22 @@ namespace CoursesApp.Services
                     return false;
 
             db.Categories.Remove(category);
+            db.SaveChanges();
             return true;
         }
 
-        public bool UpdateCategory(Category UpdatedCategory)
+        public int UpdateCategory(Category UpdatedCategory)
         {
+            string CatName = UpdatedCategory.Name.ToLower();
 
-            Category category = GetCategoryById(UpdatedCategory.ID);
+            var NameExists = db.Categories.Where(cat => cat.Name.ToLower() != CatName);
 
-          if (category == null) {return false; }
+            if (NameExists.Where(c => c.Name == CatName).Any())  return -2; 
 
-          category.Name = UpdatedCategory.Name;
+            db.Categories.Attach(UpdatedCategory);
+           db.Entry(UpdatedCategory).State = System.Data.Entity.EntityState.Modified;
 
-          db.SaveChanges();
-
-          return true;
+           return db.SaveChanges(); 
            
         }
 

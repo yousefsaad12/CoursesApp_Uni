@@ -1,3 +1,4 @@
+using CoursesApp.App_Start;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,6 +14,7 @@ namespace CoursesApp
         {
             AreaRegistration.RegisterAllAreas();
             RouteConfig.RegisterRoutes(RouteTable.Routes);
+            AutoMapperConfig.Init();
         }
     }
 }
